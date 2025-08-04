@@ -59,7 +59,7 @@ app.use("/api/holidays", holidayRoutes);
 app.use("/api/shifts", shiftRoutes);
 
 
-mongoose.connect('mongodb://mongo:WRyRAneJodavVzZbCVSQODNsfGzawLol@mongodb.railway.internal:27017')
+mongoose.connect('mongodb://mongo:WRyRAneJodavVzZbCVSQODNsfGzawLol@mainline.proxy.rlwy.net:11642')
   .then(async () => {
     console.log('✅ MongoDB connected');
     await createDefaultAdmin();
