@@ -59,13 +59,12 @@ app.use("/api/holidays", holidayRoutes);
 app.use("/api/shifts", shiftRoutes);
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/admin-user-auth', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(async () => {
-  console.log('✅ MongoDB connected');
-  await createDefaultAdmin();
-  app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
-}).catch(err => {
-  console.error('❌ MongoDB connection error:', err);
-});
+mongoose.connect('mongodb://mongo:WRyRAneJodavVzZbCVSQODNsfGzawLol@mongodb.railway.internal:27017')
+  .then(async () => {
+    console.log('✅ MongoDB connected');
+    await createDefaultAdmin();
+    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+  })
+  .catch(err => {
+    console.error('❌ MongoDB connection error:', err);
+  });
