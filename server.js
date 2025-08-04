@@ -33,10 +33,13 @@ const createDefaultAdmin = async () => {
   const existing = await User.findOne({ email: 'admin@example.com' });
   if (!existing) {
     const hashedPassword = await bcrypt.hash('admin123', 10);
-    await User.create({
-      email: 'admin@example.com',
-      password: hashedPassword,
-    });
+  await User.create({
+  name: "Admin",
+  email: "admin@example.com",
+  password: "admin123",
+  role: "Admin" // ✅ सही value
+});
+
     console.log('✅ Admin user created');
   } else {
     console.log('Admin already exists');
