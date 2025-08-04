@@ -37,7 +37,7 @@ const createDefaultAdmin = async () => {
   name: "Admin",
   email: "admin@example.com",
   password: "admin123",
-  role: "Admin" // ✅ सही value
+  role: "admin" // ✅ सही value
 });
 
     console.log('✅ Admin user created');
