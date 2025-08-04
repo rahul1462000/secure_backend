@@ -36,7 +36,7 @@ const createDefaultAdmin = async () => {
   await User.create({
   name: "Admin",
   email: "admin@example.com",
-  password: "admin123",
+  password: hashedPassword,
   role: "admin" // ✅ सही value
 });
 
